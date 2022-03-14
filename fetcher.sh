@@ -22,7 +22,6 @@ printf "
 echo -e $RESET
 
 PATH_TO_REPOS=$1
-RUN_DIR=pwd
 
 if [[ -d $PATH_TO_REPOS ]]; then
     for repo_path in $PATH_TO_REPOS/*/; do
