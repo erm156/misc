@@ -9,7 +9,6 @@ OCHRE="\033[38;5;95m"
 RESET="\033[0m"
 
 echo -e $BLUE
-
 printf "
 \n\t****************************************************************************
 \t**                                                                        **
@@ -18,7 +17,6 @@ printf "
 \t**                                                                        **
 \t****************************************************************************\n
 "
-
 echo -e $RESET
 
 PATH_TO_REPOS=$1
@@ -29,15 +27,15 @@ if [[ -d $PATH_TO_REPOS ]]; then
         if git -C $repo_path rev-parse; then
             cd $repo_path
             printf "\n\nREPO:  $repo_path"
-            printf "\n------------------------------------------------------\n\n"
+            printf "\n----------------------------------------------------------------\n\n"
             if git ls-remote --quiet &> /dev/null; then
                 git status
-                printf "\n------------------------------------------------------\n\n"
+                printf "\n----------------------------------------------------------------\n\n"
                 read -p ">>> Fetch? [y/N] " fetchyn
                 case $fetchyn in
-                    [Yy]* ) 
+                    [Yy]* )
                         git fetch --all
-                        printf "\n------------------------------------------------------\n\n"
+                        printf "\n----------------------------------------------------------------\n\n"
                         read -p ">>> Pull? [y/N] " pullyn
                         case $pullyn in
                             [Yy]* ) git pull; continue;;
