@@ -7,6 +7,11 @@
   
     - also includes functions for optimizing ARIMA model parameters and 
     testing time series stationarity
+    
+## fetcher
+    - shell script for iterating git repos, checking repo status 
+    and prompting user to fetch/pull from remote if it exists (learning 
+    more about Bash)
 
 ## mms
     - script for sending MMS from PC to phone using Twilio API and free/trial 
