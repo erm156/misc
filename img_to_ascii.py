@@ -30,6 +30,17 @@ if __name__ == "__main__":
     img_arr = np.asarray(img_lum)
 
     map_vectorized = np.vectorize(map_int_to_ascii)
-    ascii_arr = map_vectorized(img_arr, 0, 255, 0, len(ascii_gradient) - 1)
+    ascii_arr = map_vectorized(
+        img_arr, 
+        ascii_gradient,
+        0, 
+        255, 
+        0, 
+        len(ascii_gradient) - 1
+    )
 
-    np.savetxt(f"{args.image}_ascii_{uuid4().hex}.txt", ascii_arr, fmt="%s")
+    np.savetxt(
+        f"{args.image.split('.')[0]}_ascii_{uuid4().hex}.txt", 
+        ascii_arr, 
+        fmt="%s"
+    )
