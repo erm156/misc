@@ -5,11 +5,6 @@
   
     - also includes functions for optimizing ARIMA model parameters and 
     testing time series stationarity
-    
-## fetcher
-    - shell script for iterating git repos, checking repo status 
-    and prompting user to fetch/pull from remote if it exists (learning 
-    more about Bash)
 
 ## `fetcher.sh`
     - iterates git repositories, checks branch status and prompts user to fetch/pull, if applicable
