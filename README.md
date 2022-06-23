@@ -12,10 +12,6 @@
 ## `img_to_ascii.py`
     - uses corresponding ASCII characters to represent image RGB data
 
-## `mms.py`
-    - script for sending MMS from PC to phone using Twilio API and free/trial 
-    number
-
 ## `pdf_merge.py`
     - small, simple GUI for merging two PDF documents (originally created to 
     circumvent uploading PDFs containing sensitive information to a PDF-merging 
